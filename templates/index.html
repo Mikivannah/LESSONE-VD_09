@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Кликер!</h1>
+    <p>Количество кликов - {{ current_user.clicks }}</p>
+    <a href="{{url for('click') }}">Кнопка</a>
+{% endblock %}
 </body>
 </html>
